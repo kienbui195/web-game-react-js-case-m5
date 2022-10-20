@@ -1,7 +1,7 @@
-import {useEffect, useState} from 'react';
+import {useState} from 'react';
 import {useNavigate} from 'react-router-dom';
-import {Form, Formik} from "formik";
-import * as yup from "yup";
+import axios from 'axios';
+import Swal from 'sweetalert2'
 // @mui
 import {Link, Stack, IconButton, InputAdornment, TextField, Checkbox} from '@mui/material';
 import {LoadingButton} from '@mui/lab';
@@ -15,12 +15,6 @@ const REGEX = {
     password: /^.{6,}$/,
     username: /^.{3,}$/
 }
-
-const yupObject = yup.object().shape({
-    username: yup.string().required('Required'),
-    email: yup.string().email().matches(REGEX.email, 'Email address is not valid')
-});
-
 
 export default function SignupForm() {
     const navigate = useNavigate();
@@ -76,15 +70,50 @@ export default function SignupForm() {
             default:
                 break;
         }
-        console.log(error)
     }
 
-    const handleClick = () => {
-        navigate('/dashboard');
-    };
+    const callApi = async () => {
+        const data = {
+            username: form.username,
+            email: form.email,
+            password: form.password
+        }
+
+        const results = await axios.request({
+            url: "https://webgame395group.herokuapp.com/api/register",
+            method: "POST",
+            data: JSON.stringify(data),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+
+        return results
+    }
+
+    const handleApi = (data) =>{
+        if(data.type === 'success'){
+            Swal.fire(
+                'Register success',
+                'Welcome to 395 World!',
+                'success'
+            ).then(
+                navigate('/login')
+            )
+        }else {
+            Swal.fire({
+                icon: 'info',
+                title: 'Oops...',
+                text: 'Account already exists!',
+                footer: '<a href="/login">Go to Login</a>'
+            })
+        }
+    }
 
     const handleSubmit = () => {
-        console.log(1)
+        callApi().
+        then(res => handleApi(res.data)).
+        catch(err => console.log(err.message))
     }
 
     return (
@@ -198,7 +227,7 @@ export default function SignupForm() {
                 <hr/>
             </Stack>
 
-            <LoadingButton fullWidth size="large" type="submit" variant="contained" onClick={handleClick}>
+            <LoadingButton fullWidth size="large" type="submit" variant="contained" onClick={handleSubmit}>
                 Sign up
             </LoadingButton>
 
