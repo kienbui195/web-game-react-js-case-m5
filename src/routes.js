@@ -10,6 +10,7 @@ import Page404 from './pages/Page404';
 import ProductsPage from './pages/ProductsPage';
 import DashboardAppPage from './pages/DashboardAppPage';
 import SignupPage from './pages/SignupPage';
+import {FieldLevelValidationExample} from "./pages/Test";
 
 // ----------------------------------------------------------------------
 
@@ -41,6 +42,10 @@ export default function Router() {
     {
       path: '/signup',
       element: <SignupPage />,
+    },
+    {
+      path: 'test',
+      element: <FieldLevelValidationExample />
     },
     {
       path: '*',
