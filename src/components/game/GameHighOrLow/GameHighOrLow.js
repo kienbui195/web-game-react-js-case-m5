@@ -10,7 +10,7 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 // eslint-disable-next-line import/no-unresolved
 import { useDispatch, useSelector } from 'react-redux';
-import { getValue } from '../../features/gameSuggestSlice';
+import { getValue } from '../../../features/gameSuggestSlice';
 
 const randomNum = () => Math.floor(Math.random() * 11);
 
