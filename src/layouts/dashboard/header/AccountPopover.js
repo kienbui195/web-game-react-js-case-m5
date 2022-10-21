@@ -1,4 +1,6 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import axios from 'axios';
+
 // @mui
 import { alpha } from '@mui/material/styles';
 import { Box, Divider, Typography, Stack, MenuItem, Avatar, IconButton, Popover } from '@mui/material';
@@ -26,6 +28,10 @@ const MENU_OPTIONS = [
 
 export default function AccountPopover() {
   const [open, setOpen] = useState(null);
+  const [user, setUser] = useState({
+    username: '',
+    email: '',
+  });
 
   const handleOpen = (event) => {
     setOpen(event.currentTarget);
@@ -34,6 +40,27 @@ export default function AccountPopover() {
   const handleClose = () => {
     setOpen(null);
   };
+
+  const getUserApi = async () => {
+    const result = await axios.request({
+      url: 'https://webgame395group.herokuapp.com/api/user/info',
+      method: 'POST',
+      Headers: { 'Content-Type': 'Application/json' },
+      data: JSON.stringify({
+        email: localStorage.getItem('email'),
+        code: localStorage.getItem('token'),
+      }),
+    });
+    return result;
+  };
+
+  useEffect(() => {
+    getUserApi()
+      .then((res) => {
+        setUser({ username: res.data.message.username, email: res.data.message.email });
+      })
+      .catch((err) => console.log(err));
+  }, []);
 
   return (
     <>
@@ -78,10 +105,10 @@ export default function AccountPopover() {
       >
         <Box sx={{ my: 1.5, px: 2.5 }}>
           <Typography variant="subtitle2" noWrap>
-            {account.displayName}
+            {user ? user.username : ''}
           </Typography>
           <Typography variant="body2" sx={{ color: 'text.secondary' }} noWrap>
-            {account.email}
+            {user ? user.username : ''}
           </Typography>
         </Box>
 

@@ -14,7 +14,7 @@ import { getValue } from '../../../features/gameSuggestSlice';
 
 const randomNum = () => Math.floor(Math.random() * 11);
 
-const gameHighOrLow = () => {
+const GameHighOrLow = () => {
     const mid = 5;
 	const navigate = useNavigate();
 	const [second, setSecond] = useState();
@@ -110,4 +110,4 @@ const gameHighOrLow = () => {
 	);
 };
 
-export default gameHighOrLow;
+export default GameHighOrLow;

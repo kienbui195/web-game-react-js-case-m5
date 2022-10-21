@@ -6,11 +6,11 @@ import SimpleLayout from './layouts/simple';
 import BlogPage from './pages/BlogPage';
 import LoginPage from './pages/LoginPage';
 import Page404 from './pages/Page404';
-import ProductsPage from './pages/ProductsPage';
 import DashboardAppPage from './pages/DashboardAppPage';
 import SignupPage from './pages/SignupPage';
 import Quiz from "./components/game/gameQuiz/Quiz";
 import {FieldLevelValidationExample} from "./pages/Test";
+import GameHighOrLow from './components/game/GameHighOrLow/GameHighOrLow';
 
 // ----------------------------------------------------------------------
 
@@ -23,7 +23,7 @@ export default function Router() {
         { element: <Navigate to="/dashboard/app" />, index: true },
         { path: 'app', element: <DashboardAppPage /> },
         { path: 'quiz', element: <Quiz /> },
-        { path: 'products', element: <ProductsPage /> },
+        { path: 'products', element: <GameHighOrLow /> },
         { path: 'blog', element: <BlogPage /> },
       ],
     },
