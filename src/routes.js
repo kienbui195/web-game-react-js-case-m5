@@ -23,7 +23,7 @@ export default function Router() {
         { element: <Navigate to="/dashboard/app" />, index: true },
         { path: 'app', element: <DashboardAppPage /> },
         { path: 'quiz', element: <Quiz /> },
-        { path: 'products', element: <GameHighOrLow /> },
+        { path: 'casino', element: <GameHighOrLow /> },
         { path: 'blog', element: <BlogPage /> },
       ],
     },
