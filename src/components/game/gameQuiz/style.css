@@ -22,7 +22,7 @@
     width: 650px;
     min-height: 150px;
     height: min-content;
-    transform: translate(-50%, 30%);
+    transform: translate(-50%, 15%);
     border-radius: 15px;
     padding: 20px;
     box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
