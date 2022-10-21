@@ -2,11 +2,197 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7904f682-5a23-408c-be1b-874d5d22b8be" name="Changes" comment="">
+<<<<<<< HEAD
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CaseStudy/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/../CaseStudy/test.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CaseStudy/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/../CaseStudy/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CaseStudyModule3/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/../CaseStudyModule3/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TS/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TS/.idea/TS.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TS/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TS/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TS/ES6/arrow-functions-example.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TS/ES6/default-parameters-example.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TS/ES6/destructuring-assignment-1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TS/ES6/destructuring-assignment-2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TS/ES6/destructuring-assignment-example.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TS/ES6/for-loop-example.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TS/ES6/khaibaomacdinhchothamso.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TS/ES6/luyen-arrowfunction.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TS/ES6/spread-operator-example.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TS/ES6/spread-syntax-1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TS/ES6/spread-syntax-example.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TS/OOP/QuadraticEquation.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TS/OOP/StopWatch.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TS/OOP/congthucnauan.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TS/OOP/phanloaihinhhoc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TS/OOP/tinhkhoangcach2diem.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TS/test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test-Module3/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../Test-Module3/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test-Module3/database.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../Test-Module3/database.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test-Module3/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Test-Module3/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test-Module3/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Test-Module3/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test-Module3/src/controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Test-Module3/src/controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test-Module3/src/databaseModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Test-Module3/src/databaseModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test-Module3/templates/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Test-Module3/templates/add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test-Module3/templates/city.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Test-Module3/templates/city.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test-Module3/templates/delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Test-Module3/templates/delete.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test-Module3/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Test-Module3/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test-Module3/templates/update.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Test-Module3/templates/update.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test_module_4/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../Test_module_4/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test_module_4/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Test_module_4/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test_module_4/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Test_module_4/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test_module_4/src/controllers/controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Test_module_4/src/controllers/controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test_module_4/src/routers/router.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Test_module_4/src/routers/router.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test_module_4/src/schemas/branch.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Test_module_4/src/schemas/branch.model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test_module_4/src/schemas/employee.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Test_module_4/src/schemas/employee.model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test_module_4/src/views/404page.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/../Test_module_4/src/views/404page.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test_module_4/src/views/create.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/../Test_module_4/src/views/create.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test_module_4/src/views/detail.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/../Test_module_4/src/views/detail.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test_module_4/src/views/list.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/../Test_module_4/src/views/list.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test_module_4/src/views/update.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/../Test_module_4/src/views/update.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test_module_4/tsconfig.build.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Test_module_4/tsconfig.build.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Test_module_4/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Test_module_4/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thực hành/untitled/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thực hành/untitled/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thực hành/untitled/src/middleware/auth.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thực hành/untitled/src/router/router.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thực hành/untitled/src/schemas/product.model.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thực hành/untitled/src/schemas/user.model.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thực hành/untitled/src/views/create.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thực hành/untitled/src/views/error.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thực hành/untitled/src/views/home.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thực hành/untitled/src/views/list.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thực hành/untitled/src/views/login.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thực hành/untitled/src/views/success.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thực hành/untitled/tsconfig.build.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thực hành/untitled/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thực hành/xaydungAPIbangJWT/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thực hành/xaydungAPIbangJWT/src/middleware/auth.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thực hành/xaydungAPIbangJWT/src/router/router.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thực hành/xaydungAPIbangJWT/src/schemas/product.model.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thực hành/xaydungAPIbangJWT/src/schemas/user.model.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thực hành/xaydungAPIbangJWT/tsconfig.build.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thực hành/xaydungAPIbangJWT/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../binary-search/src/BinaryTree.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../binary-search/src/BinaryTree.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blogs_manager/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../blogs_manager/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blogs_manager/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../blogs_manager/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blogs_manager/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../blogs_manager/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blogs_manager/src/data-source.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../blogs_manager/src/data-source.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blogs_manager/src/entity/Blogs.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../blogs_manager/src/entity/Blogs.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blogs_manager/src/views/create.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/../blogs_manager/src/views/create.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blogs_manager/src/views/list.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/../blogs_manager/src/views/list.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blogs_manager/src/views/update.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/../blogs_manager/src/views/update.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blogs_manager/tsconfig.build.json" beforeDir="false" afterPath="$PROJECT_DIR$/../blogs_manager/tsconfig.build.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blogs_manager/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/../blogs_manager/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../express_auth_bt1/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../express_auth_bt1/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../express_auth_bt1/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../express_auth_bt1/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../express_auth_bt1/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../express_auth_bt1/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../express_auth_bt1/src/middleware/passport.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../express_auth_bt1/src/middleware/passport.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../express_auth_bt1/src/router/authRouter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../express_auth_bt1/src/router/authRouter.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../express_auth_bt1/src/schemas/user.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../express_auth_bt1/src/schemas/user.model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../express_auth_bt1/src/views/home.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/../express_auth_bt1/src/views/home.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../express_auth_bt1/src/views/login.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/../express_auth_bt1/src/views/login.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../express_auth_bt1/tsconfig.build.json" beforeDir="false" afterPath="$PROJECT_DIR$/../express_auth_bt1/tsconfig.build.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../express_auth_bt1/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/../express_auth_bt1/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../express_phonebook_manager/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../express_phonebook_manager/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../express_phonebook_manager/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../express_phonebook_manager/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../express_phonebook_manager/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../express_phonebook_manager/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../express_phonebook_manager/src/router/phoneBook.router.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../express_phonebook_manager/src/router/phoneBook.router.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../express_phonebook_manager/src/schema/phoneBook.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../express_phonebook_manager/src/schema/phoneBook.model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../express_phonebook_manager/src/views/create.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/../express_phonebook_manager/src/views/create.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../express_phonebook_manager/src/views/home.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/../express_phonebook_manager/src/views/home.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../express_phonebook_manager/src/views/update.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/../express_phonebook_manager/src/views/update.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../express_phonebook_manager/tsconfig.build.json" beforeDir="false" afterPath="$PROJECT_DIR$/../express_phonebook_manager/tsconfig.build.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../express_phonebook_manager/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/../express_phonebook_manager/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../express_quanlynhanvien/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../express_quanlynhanvien/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../express_quanlynhanvien/views/create.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/../express_quanlynhanvien/views/create.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../express_quanlynhanvien/views/list.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/../express_quanlynhanvien/views/list.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../express_simple_blog/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../express_simple_blog/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../express_simple_blog/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../express_simple_blog/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../express_simple_blog/views/blog.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/../express_simple_blog/views/blog.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../express_simple_blog/views/view.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/../express_simple_blog/views/view.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../express_simple_staff_manager/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../express_simple_staff_manager/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../express_simple_staff_manager/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../express_simple_staff_manager/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../express_simple_staff_manager/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../express_simple_staff_manager/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../express_simple_staff_manager/views/create.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/../express_simple_staff_manager/views/create.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../express_simple_staff_manager/views/view.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/../express_simple_staff_manager/views/view.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../laptrinhhuongdoituong/car/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../laptrinhhuongdoituong/car/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../laptrinhhuongdoituong/car/js/car.js" beforeDir="false" afterPath="$PROJECT_DIR$/../laptrinhhuongdoituong/car/js/car.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../laptrinhhuongdoituong/car/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../laptrinhhuongdoituong/car/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../laptrinhhuongdoituong/carogame/cell.js" beforeDir="false" afterPath="$PROJECT_DIR$/../laptrinhhuongdoituong/carogame/cell.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../laptrinhhuongdoituong/carogame/gameboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/../laptrinhhuongdoituong/carogame/gameboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../laptrinhhuongdoituong/carogame/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../laptrinhhuongdoituong/carogame/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../laptrinhhuongdoituong/carogame/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../laptrinhhuongdoituong/carogame/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../laptrinhhuongdoituong/funny circle.html" beforeDir="false" afterPath="$PROJECT_DIR$/../laptrinhhuongdoituong/funny circle.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mang/faketext.html" beforeDir="false" afterPath="$PROJECT_DIR$/../mang/faketext.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../middleware-checklogin/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../middleware-checklogin/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../middleware-checklogin/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../middleware-checklogin/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../middleware-checklogin/src/middleware/checkLogin.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../middleware-checklogin/src/middleware/checkLogin.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../middleware-checklogin/src/views/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/../middleware-checklogin/src/views/index.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../middleware-checklogin/tsconfig.build.json" beforeDir="false" afterPath="$PROJECT_DIR$/../middleware-checklogin/tsconfig.build.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../middleware-checklogin/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/../middleware-checklogin/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../middleware_secret_token/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../middleware_secret_token/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../middleware_secret_token/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../middleware_secret_token/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../middleware_secret_token/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../middleware_secret_token/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../middleware_secret_token/src/middleware/secretToken.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../middleware_secret_token/src/middleware/secretToken.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../middleware_secret_token/tsconfig.build.json" beforeDir="false" afterPath="$PROJECT_DIR$/../middleware_secret_token/tsconfig.build.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../middleware_secret_token/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/../middleware_secret_token/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../todoList-realtime/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../todoList-realtime/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../todoList-realtime/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/../todoList-realtime/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled/helloWorld.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled/helloWorld.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled100/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled100/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled102/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled102/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled102/view/notfound.html" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled102/view/notfound.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled108/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled108/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled109/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled109/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled114/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled114/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled128/dist/index.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled128/dist/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled128/dist/index.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled128/dist/src/data-source.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled128/dist/src/data-source.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled128/dist/src/data-source.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled128/dist/src/entity/PhoneBook.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled128/dist/src/entity/PhoneBook.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled128/dist/src/entity/PhoneBook.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled128/dist/tsconfig.build.tsbuildinfo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled128/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled128/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled128/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled128/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled128/src/data-source.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled128/src/data-source.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled128/src/entity/PhoneBook.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled128/src/entity/PhoneBook.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled133/src/middleware/responseTime.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled133/src/middleware/responseTime.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled134/src/router/book.router.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled134/src/router/book.router.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled134/src/schemas/author.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled134/src/schemas/author.model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled134/src/schemas/book.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled134/src/schemas/book.model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled134/src/views/createBook.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled134/src/views/createBook.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled134/src/views/listBook.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled134/src/views/listBook.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled27/jest.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled27/jest.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled27/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled27/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled34/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled34/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled6/StaffManagerment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled6/StaffManagerment.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled62/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled62/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled62/index2.html" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled62/index2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled71/demo.js" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled71/demo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled71/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled71/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled71/index2.html" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled71/index2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled71/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled71/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled71/style2.css" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled71/style2.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled73/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled73/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled78/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled78/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled90/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled90/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled92/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled92/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled96/NodeJS-Register-form-basic" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled96/NodeJS-Register-form-basic" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled97/NodeJS-Register-form-basic" beforeDir="false" afterPath="$PROJECT_DIR$/../untitled97/NodeJS-Register-form-basic" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../voterealtime/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../voterealtime/templates/index.html" afterDir="false" />
+=======
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/gameQuiz/Quiz.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/game/gameQuiz/Quiz.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/gameQuiz/questions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/game/gameQuiz/questions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/gameQuiz/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/game/gameQuiz/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes.js" afterDir="false" />
+>>>>>>> 517c8c2a3434b6148b4c8b31d7780acb492c75b1
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +219,9 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2GMJiKwQdrFC3ZBaeC7zOUx08gJ" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -50,6 +238,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.standard": "",
     "nodejs_package_manager_path": "yarn",
+    "prettierjs.PrettierConfiguration.Package": "D:\\JS\\Case-Study-Module-5\\node_modules\\prettier",
     "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
     "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2022.1.1\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"

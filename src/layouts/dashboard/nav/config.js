@@ -17,9 +17,9 @@ const navConfig = [
     icon: icon('quiz_black_24dp'),
   },
   {
-    title: 'product',
-    path: '/dashboard/products',
-    icon: icon('ic_cart'),
+    title: 'casino',
+    path: '/dashboard/casino',
+    icon: icon('casino_black_24dp'),
   },
   {
     title: 'blog',
