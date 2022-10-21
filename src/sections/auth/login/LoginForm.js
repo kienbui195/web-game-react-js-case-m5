@@ -59,6 +59,7 @@ export default function LoginForm() {
             email: form.email,
             password: form.password
         }
+        console.log(data)
 
         const results = await axios.request({
             url: "https://webgame395group.herokuapp.com/api/login",
@@ -139,9 +140,15 @@ export default function LoginForm() {
                 </Link>
             </Stack>
 
-            <LoadingButton fullWidth size="large" type="submit" variant="contained" onClick={handleClick}>
-                Login
-            </LoadingButton>
+            {(!error.email && !error.password)
+            ?<LoadingButton fullWidth size="large" type="submit" variant="contained" onClick={handleClick}>
+                    Login
+                </LoadingButton>
+            :<LoadingButton disabled fullWidth size="large" type="submit" variant="contained" onClick={handleClick}>
+                    Login
+                </LoadingButton>
+            }
+
         </>
     );
 }
