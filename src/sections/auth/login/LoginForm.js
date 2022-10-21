@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 import {useNavigate} from 'react-router-dom';
 import axios from 'axios';
 import Swal from 'sweetalert2'
@@ -18,6 +18,12 @@ const REGEX = {
 export default function LoginForm() {
     const navigate = useNavigate();
     const [showPassword, setShowPassword] = useState(false);
+
+    useEffect(() => {
+        if(localStorage.getItem('user')){
+            navigate('/');
+        }
+    },[])
 
     const [form, setForm] = useState({
         email: '',
@@ -74,7 +80,11 @@ export default function LoginForm() {
 
     const handleApi = (data) =>{
         if(data.type === 'success'){
-            
+            const item = {
+                email: form.email,
+                password: form.password
+            }
+            localStorage.setItem('user', JSON.stringify(item));
             navigate('/')
         }else if(data.type === 'error'){
             Swal.fire({
