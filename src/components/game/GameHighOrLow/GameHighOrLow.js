@@ -4,6 +4,7 @@ import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
+import Alert from '@mui/material/Alert';
 import Box from '@mui/material/Box';
 import { useState , useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -20,6 +21,7 @@ const GameHighOrLow = () => {
 	const [second, setSecond] = useState();
 	const [result, setResult] = useState(0);
 	const dispatch = useDispatch();
+	const [mess, setMess] = useState('')
 	const userSelect = useSelector(state => state.dataGame.value);
 
 	const handleSubmit = e => {
@@ -28,14 +30,19 @@ const GameHighOrLow = () => {
 		setSecond(randomNum());
 	};
 
+	const userInfo = {
+		email: localStorage.getItem('email'),
+		code: localStorage.getItem('code')
+	}
+
 	const updatePoint = async () => {
 		const result =  await axios.request({
 			url: 'https://webgame395group.herokuapp.com/api/setpoint',
 			method: 'POST',
 			Headers: { 'Content-Type': 'Application/json' },
 			data: JSON.stringify({
-				email: 'ken@gmail.com',
-				code: '',
+				email: `${userInfo.email}`,
+				code: `${userInfo.code}`
 			}),
         });
         
@@ -46,9 +53,10 @@ const GameHighOrLow = () => {
 		updatePoint()
 			.then(res => {
 				if (res.data.type === 'success') {
-					navigate('/home');
+					navigate('/');
 				} else {
-					navigate('/login');
+					setMess('Bạn cần phải login mới lưu được điểm số!')
+					setTimeout(()=>navigate('/login'),2000)
 				}
 			})
 			.catch(err => console.log(err.message));
@@ -77,7 +85,8 @@ const GameHighOrLow = () => {
 			<Grid>
 				<Grid item xs />
 				<Grid item xs={8} sx={{ textAlign: 'center' }}>
-					<Paper elevation={3} sx={{ padding: 2, marginTop: 10, textAlign: 'center', maxWidth: 300 }}>
+					<Paper elevation={3} sx={{ padding: 2, marginTop: 10, textAlign: 'center', maxWidth: 300 , marginLeft: 26}}>
+						{mess ? (<Alert severity='warning'>{mess}</Alert>) : ''}
 						<h2> Higher Or Lower Game???</h2>
 						<p>Your Point: {result || 0}</p>
 
@@ -96,11 +105,11 @@ const GameHighOrLow = () => {
 							</div>
 
 							<Button type='submit' variant='contained' color='success' sx={{ marginTop: 3 }}>
-								submit
+								Guess
 							</Button>
 						</Box>
 						<Button type='button' onClick={handleExit} variant='outlined' sx={{ marginTop: 1 }}>
-							Other Game...
+							Save Point
 						</Button>
 					</Paper>
 				</Grid>
