@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 import {useNavigate} from 'react-router-dom';
 import axios from 'axios';
 import Swal from 'sweetalert2'
@@ -18,6 +18,12 @@ const REGEX = {
 export default function LoginForm() {
     const navigate = useNavigate();
     const [showPassword, setShowPassword] = useState(false);
+
+    useEffect(() => {
+        if(localStorage.getItem('user')){
+            navigate('/');
+        }
+    },[])
 
     const [form, setForm] = useState({
         email: '',
@@ -59,7 +65,6 @@ export default function LoginForm() {
             email: form.email,
             password: form.password
         }
-        console.log(data)
 
         const results = await axios.request({
             url: "https://webgame395group.herokuapp.com/api/login",
@@ -74,7 +79,34 @@ export default function LoginForm() {
     }
 
     const handleApi = (data) =>{
-        console.log(data)
+        if(data.type === 'success'){
+            const item = {
+                email: form.email,
+                password: form.password
+            }
+            localStorage.setItem('user', JSON.stringify(item));
+            navigate('/')
+        }else if(data.type === 'error'){
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: data.message
+            })
+        }else if(data.type === 'notexist'){
+            Swal.fire({
+                icon: 'info',
+                title: 'Oops...',
+                text: data.message,
+                footer: '<a href="/signup">Create new account?</a>'
+            })
+        } else {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Something went wrong. Please try again!',
+                footer: '<a href="/signup">Create new account?</a>'
+            })
+        }
     }
 
     const handleClick = () => {
