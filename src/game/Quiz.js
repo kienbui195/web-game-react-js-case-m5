@@ -1,9 +1,11 @@
 import React,{useState} from "react";
+import {useNavigate} from "react-router-dom";
 import "./style.css";
 import { questions } from "./questions";
 
 
-function Caro() {
+function Quiz() {
+    const navigate = useNavigate();
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [score, setScore] = useState(0);
     const [showScore, setShowScore] = useState(false);
@@ -19,23 +21,25 @@ function Caro() {
             setShowScore(true);
         }
     };
+
     return (
         <>
-        <div className="app-score">
-            <selection className="showScore">Your score: {score}</selection>
-        </div>
-        <div className="app">
             {showScore ? (
-                <section className="showScore-section">
-                    <h1>Your score is {score} out of {questions.length}</h1>
+                <div className="app">
+                    <section className="showScore-section">
                     <div>
-                        <button>New Game</button>
+                        <button onClick={()=>{window.location.reload()}} className="button">Chơi lại</button>
                     </div>
-                    <button>Exit</button>
+                    <button onClick={()=>{navigate("/dashboard")}} className="button">Thoát</button>
                 </section>
+                </div>
             ) : (
 
-                <div>
+               <>
+                    <div className="app-score">
+                        <selection className="showScore">Your score: {score}</selection>
+                    </div>
+                <div className="app">
                     <section className="question-section">
                         <h1>
                             Question {currentQuestion + 1}/{questions.length}
@@ -45,16 +49,18 @@ function Caro() {
 
                     <section className="answer-section">
                         {questions[currentQuestion].answerOptions.map((item) => (
-                            <button onClick={() => handleClick(item.isCorrect)}>
+                            <button className="button" onClick={() => handleClick(item.isCorrect)}>
                                 {item.answerText}
                             </button>
                         ))}
                     </section>
                 </div>
-            )}
-        </div>
+               </>
+            )
+            }
+
         </>
     );
 }
 
-export default Caro;
+export default Quiz;

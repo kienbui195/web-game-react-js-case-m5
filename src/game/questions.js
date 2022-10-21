@@ -1,5 +1,23 @@
 export const questions = [
     {
+        questionText: "Người yêu của Ngô Minh Ngọc là ai?",
+        answerOptions: [
+            { answerText: "Huy", isCorrect: false },
+            { answerText: "Dung", isCorrect: true },
+            { answerText: "Thao", isCorrect: false },
+            { answerText: "Kiệt", isCorrect: false },
+        ],
+    },
+    {
+        questionText: "Ai là bóng mà không hồng của C05?",
+        answerOptions: [
+            { answerText: "Huy", isCorrect: true },
+            { answerText: "Ngọc", isCorrect: false },
+            { answerText: "Thao", isCorrect: false },
+            { answerText: "Kiệt", isCorrect: false },
+        ],
+    },
+    {
         questionText: "What is the capital of France?",
         answerOptions: [
             { answerText: "New York", isCorrect: false },
