@@ -28,12 +28,15 @@ function Quiz() {
         <>
             {showScore ? (
                 <div className="app">
-                    <section className="showScore-section">
+                    <section className="question-section">
+                        <h1>Chúc mừng bạn đã trả lời xong!!!</h1>
+                    </section>
+                    <section className="answer-section">
                     <div>
                         <button onClick={()=>{window.location.reload()}} className="button">Chơi lại</button>
                     </div>
                     <button onClick={()=>{navigate("/dashboard")}} className="button">Thoát</button>
-                </section>
+                    </section>
                 </div>
             ) : (
 
