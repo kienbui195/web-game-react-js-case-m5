@@ -59,7 +59,6 @@ export default function LoginForm() {
             email: form.email,
             password: form.password
         }
-        console.log(data)
 
         const results = await axios.request({
             url: "https://webgame395group.herokuapp.com/api/login",
@@ -74,7 +73,30 @@ export default function LoginForm() {
     }
 
     const handleApi = (data) =>{
-        console.log(data)
+        if(data.type === 'success'){
+            
+            navigate('/')
+        }else if(data.type === 'error'){
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: data.message
+            })
+        }else if(data.type === 'notexist'){
+            Swal.fire({
+                icon: 'info',
+                title: 'Oops...',
+                text: data.message,
+                footer: '<a href="/signup">Create new account?</a>'
+            })
+        } else {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Something went wrong. Please try again!',
+                footer: '<a href="/signup">Create new account?</a>'
+            })
+        }
     }
 
     const handleClick = () => {
