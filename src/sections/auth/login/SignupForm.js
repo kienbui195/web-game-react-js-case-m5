@@ -226,10 +226,15 @@ export default function SignupForm() {
             <Stack direction="row" alignItems="center" justifyContent="space-between" sx={{my: 2}}>
                 <hr/>
             </Stack>
+            {(!error.email && !error.username && !error.password && !error.passwordConfirm)
+            ?<LoadingButton fullWidth size="large" type="submit" variant="contained" onClick={handleSubmit}>
+                    Sign up
+                </LoadingButton>
+            :<LoadingButton disabled fullWidth size="large" type="submit" variant="contained" onClick={handleSubmit}>
+                    Sign up
+                </LoadingButton>
+            }
 
-            <LoadingButton fullWidth size="large" type="submit" variant="contained" onClick={handleSubmit}>
-                Sign up
-            </LoadingButton>
 
         </>
     );
