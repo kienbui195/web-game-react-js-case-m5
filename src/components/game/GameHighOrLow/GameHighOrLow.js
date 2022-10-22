@@ -71,14 +71,14 @@ const GameHighOrLow = () => {
     if (second) {
       if (second > mid) {
         if (userSelect === 1) {
-          setResult(result + 2);
+          setResult(result + 10);
         } else {
-          setResult(result - 1);
+          setResult(result - 5);
         }
       } else if (userSelect === 1) {
-        setResult(result - 1);
+        setResult(result - 5);
       } else {
-        setResult(result + 2);
+        setResult(result + 10);
       }
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
