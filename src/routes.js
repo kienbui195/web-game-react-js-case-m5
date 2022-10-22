@@ -3,7 +3,6 @@ import { Navigate, useRoutes } from 'react-router-dom';
 import DashboardLayout from './layouts/dashboard';
 import SimpleLayout from './layouts/simple';
 //
-import BlogPage from './pages/BlogPage';
 import LoginPage from './pages/LoginPage';
 import Page404 from './pages/Page404';
 import DashboardAppPage from './pages/DashboardAppPage';
@@ -11,6 +10,8 @@ import SignupPage from './pages/SignupPage';
 import Quiz from "./components/game/gameQuiz/Quiz";
 import {FieldLevelValidationExample} from "./pages/Test";
 import GameHighOrLow from './components/game/GameHighOrLow/GameHighOrLow';
+import LuckyGame from './components/game/GameMayMan/LuckyGame';
+import UserProfile from './pages/UserProfile';
 
 // ----------------------------------------------------------------------
 
@@ -24,7 +25,8 @@ export default function Router() {
         { path: 'app', element: <DashboardAppPage /> },
         { path: 'quiz', element: <Quiz /> },
         { path: 'casino', element: <GameHighOrLow /> },
-        { path: 'blog', element: <BlogPage /> },
+        { path: 'luckynumber', element: <LuckyGame /> },
+        {path: 'profile', element: <UserProfile />},
       ],
     },
     {
@@ -35,6 +37,7 @@ export default function Router() {
       element: <SimpleLayout />,
       children: [
         { element: <Navigate to="/dashboard/app" />, index: true },
+        
         { path: '404', element: <Page404 /> },
         { path: '*', element: <Navigate to="/404" /> },
       ],
