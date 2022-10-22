@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 // @mui
 import { alpha } from '@mui/material/styles';
@@ -18,10 +19,6 @@ const MENU_OPTIONS = [
     label: 'Profile',
     icon: 'eva:person-fill',
   },
-  {
-    label: 'Settings',
-    icon: 'eva:settings-2-fill',
-  },
 ];
 
 // ----------------------------------------------------------------------
@@ -32,13 +29,53 @@ export default function AccountPopover() {
     username: '',
     email: '',
   });
+  const navigate = useNavigate();
 
   const handleOpen = (event) => {
     setOpen(event.currentTarget);
   };
 
-  const handleClose = () => {
-    setOpen(null);
+  const logoutApi = async () => {
+    const userInfo = {
+      email: localStorage.getItem('email'),
+      code: localStorage.getItem('code'),
+    };
+    const result = await axios.request({
+      url: 'https://webgame395group.herokuapp.com/api/logout',
+      method: 'POST',
+      headers: { 'Content-Type': 'Application/json' },
+      data: JSON.stringify({
+        email: userInfo.email,
+        code: userInfo.code,
+      }),
+    });
+    return result;
+  };
+
+  const handleClose = (action) => {
+    switch (action) {
+      case 'Home':
+        navigate('/');
+        break;
+      case 'Profile':
+        navigate('/dashboard/profile');
+        break;
+      case 'Logout':
+        if (window.confirm('Are U Sure?')) {
+          logoutApi()
+            .then((res) => {
+              if (res.data.type === 'success') {
+                navigate('/login');
+              } else if (res.data.type === 'error') {
+                console.log(res.data.message);
+              }
+            })
+            .catch((err) => console.log(err.message));
+        } else setOpen(null);
+        break;
+      default:
+        setOpen(null)
+    }
   };
 
   const getUserApi = async () => {
@@ -48,7 +85,7 @@ export default function AccountPopover() {
       Headers: { 'Content-Type': 'Application/json' },
       data: JSON.stringify({
         email: localStorage.getItem('email'),
-        code: localStorage.getItem('token'),
+        code: localStorage.getItem('code'),
       }),
     });
     return result;
@@ -116,7 +153,7 @@ export default function AccountPopover() {
 
         <Stack sx={{ p: 1 }}>
           {MENU_OPTIONS.map((option) => (
-            <MenuItem key={option.label} onClick={handleClose}>
+            <MenuItem key={option.label} onClick={() => handleClose(`${option.label}`)}>
               {option.label}
             </MenuItem>
           ))}
@@ -124,7 +161,7 @@ export default function AccountPopover() {
 
         <Divider sx={{ borderStyle: 'dashed' }} />
 
-        <MenuItem onClick={handleClose} sx={{ m: 1 }}>
+        <MenuItem onClick={()=>handleClose('Logout')} sx={{ m: 1 }}>
           Logout
         </MenuItem>
       </Popover>

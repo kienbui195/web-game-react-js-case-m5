@@ -22,9 +22,14 @@ const navConfig = [
     icon: icon('casino_black_24dp'),
   },
   {
-    title: 'blog',
-    path: '/dashboard/blog',
-    icon: icon('ic_blog'),
+    title: 'lucky game',
+    path: '/dashboard/luckynumber',
+    icon: icon('videogame_asset_black_24dp'),
+  },
+  {
+    title: 'User Profile',
+    path: '/dashboard/profile',
+    icon: icon('account_circle_black_24dp'),
   },
   {
     title: 'login',
@@ -32,9 +37,9 @@ const navConfig = [
     icon: icon('ic_lock'),
   },
   {
-    title: 'Not found',
-    path: '/404',
-    icon: icon('ic_disabled'),
+    title: 'about',
+    path: '/dashboard/about',
+    icon: icon('psychology_alt_black_24dp'),
   },
 ];
 
