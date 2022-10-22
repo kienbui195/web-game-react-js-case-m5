@@ -4,9 +4,9 @@ import { Formik, Form, Field } from 'formik';
 function validateEmail(value) {
     let error;
     if (!value) {
-        error = 'Required';
+        error = 'Không được để trống!';
     } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)) {
-        error = 'Invalid email address';
+        error = 'Email không hợp lệ!';
     }
     return error;
 }
@@ -14,7 +14,7 @@ function validateEmail(value) {
 function validateUsername(value) {
     let error;
     if (value === 'admin') {
-        error = 'Nice try!';
+        error = 'Thử một tên khác!';
     }
     return error;
 }

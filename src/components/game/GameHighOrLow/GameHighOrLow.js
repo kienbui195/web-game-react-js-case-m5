@@ -3,7 +3,6 @@
 import * as React from 'react';
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
-import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import Alert from '@mui/material/Alert';
 import Box from '@mui/material/Box';
@@ -60,7 +59,7 @@ const GameHighOrLow = () => {
         if (res.data.type === 'success') {
           navigate('/');
         } else {
-          setMess('Bạn cần phải login mới lưu được điểm số!');
+          setMess('Bạn cần phải login để lưu được điểm số!');
           setTimeout(() => navigate('/login'), 2000);
         }
       })
@@ -87,13 +86,13 @@ const GameHighOrLow = () => {
 
   return (
     <div>
-      <Grid>
+      <Grid sx={{}}>
         <Grid item xs />
         <Grid item xs={8} sx={{ textAlign: 'center' }}>
           <Paper
             elevation={3}
-            sx={{ padding: 2, marginTop: 3, textAlign: 'center', maxWidth: 350, marginLeft: 26 }}
-            variant="contained"
+					  sx={{ padding: 2, marginTop: 3, textAlign: 'center', maxWidth: 370, marginLeft: 26, boxShadow: '5px 5px 5px 5px'}}
+					  
           >
             {mess ? <Alert severity="warning">{mess}</Alert> : ''}
             <h2>
@@ -115,12 +114,12 @@ const GameHighOrLow = () => {
                 </label>
               </div>
 
-              <Button type="submit" variant="contained" color="success" sx={{ marginTop: 3 }}>
-                Guess
+              <Button type="submit" variant="contained" color="success" sx={{ marginTop: 3, minWidth: 98 }}>
+                Đoán
               </Button>
             </Box>
-            <Button type="button" onClick={handleExit} variant="outlined" sx={{ marginTop: 1 }}>
-              Save Point
+            <Button type="button" onClick={handleExit} variant="outlined" sx={{ marginTop: 1, minWidth: 90  }}>
+              Lưu điểm
             </Button>
           </Paper>
         </Grid>
