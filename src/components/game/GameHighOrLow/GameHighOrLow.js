@@ -86,7 +86,7 @@ const GameHighOrLow = () => {
 
   return (
     <div>
-      <Grid>
+      <Grid sx={{}}>
         <Grid item xs />
         <Grid item xs={8} sx={{ textAlign: 'center' }}>
           <Paper
