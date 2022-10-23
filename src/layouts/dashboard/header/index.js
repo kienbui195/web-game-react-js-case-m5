@@ -59,7 +59,6 @@ export default function Header({ onOpenNav }) {
 
         <Searchbar />
         <Box sx={{ flexGrow: 1 }} />
-
         <Stack
           direction="row"
           alignItems="center"
@@ -68,6 +67,7 @@ export default function Header({ onOpenNav }) {
             sm: 1,
           }}
         >
+
           <LanguagePopover />
           <NotificationsPopover />
           <AccountPopover />
