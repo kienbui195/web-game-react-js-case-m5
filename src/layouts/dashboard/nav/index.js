@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 // @mui
 import { styled, alpha } from '@mui/material/styles';
-import { Box, Link, Button, Drawer, Typography, Avatar, Stack } from '@mui/material';
+import { Box, Link, Button, Drawer, Typography, Avatar, Stack, Paper } from '@mui/material';
 // mock
 import account from '../../../_mock/account';
 // hooks
@@ -36,6 +36,10 @@ Nav.propTypes = {
 
 export default function Nav({ openNav, onCloseNav }) {
   const { pathname } = useLocation();
+  const [status, setStatus] = useState({
+    button: 'block',
+    link: 'none',
+  });
 
   const isDesktop = useResponsive('up', 'lg');
 
@@ -89,17 +93,30 @@ export default function Nav({ openNav, onCloseNav }) {
 
           <Box sx={{ textAlign: 'center' }}>
             <Typography gutterBottom variant="h6">
-              Get more?
+              You want to give us feedback?
             </Typography>
 
             <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-              From only $69
+              Any of your comments are like a treasure to us...
             </Typography>
           </Box>
 
-          <Button href="https://material-ui.com/store/items/minimal-dashboard/" target="_blank" variant="contained">
-            Upgrade to Pro
+          <Button
+            onClick={() => {
+              setStatus({ button: 'none', link: 'block' });
+            }}
+            target="_blank"
+            variant="contained"
+            sx={{ display: status.button}}
+          >
+            Feedback
           </Button>
+          <Paper elevation={3} sx={{ display: status.link }}>
+            <Typography variant="body2" sx={{ color: 'text.secondary', display: status.link }}>
+              Send some email to: tktclothershopc0522i1@gmail.com
+            </Typography>
+            <Button onClick={()=>setStatus({button: 'block', link: 'none'})}>Back</Button>
+          </Paper>
         </Stack>
       </Box>
     </Scrollbar>

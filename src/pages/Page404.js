@@ -22,7 +22,7 @@ export default function Page404() {
   return (
     <>
       <Helmet>
-        <title> 404 Page Not Found | Minimal UI </title>
+        <title> 404 Page Not Found </title>
       </Helmet>
 
       <Container>
@@ -43,7 +43,7 @@ export default function Page404() {
           />
 
           <Button to="/" size="large" variant="contained" component={RouterLink}>
-            Go to Home
+             Home
           </Button>
         </StyledContent>
       </Container>
