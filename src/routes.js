@@ -12,6 +12,7 @@ import {FieldLevelValidationExample} from "./pages/Test";
 import GameHighOrLow from './components/game/GameHighOrLow/GameHighOrLow';
 import LuckyGame from './components/game/GameMayMan/LuckyGame';
 import UserProfile from './pages/UserProfile';
+import LeaderBoard from "./pages/LeaderBoard";
 
 // ----------------------------------------------------------------------
 
@@ -22,6 +23,7 @@ export default function Router() {
       element: <DashboardLayout />,
       children: [
         { element: <Navigate to="/dashboard/app" />, index: true },
+        { path: 'leaderboard', element: <LeaderBoard /> },
         { path: 'app', element: <DashboardAppPage /> },
         { path: 'quiz', element: <Quiz /> },
         { path: 'casino', element: <GameHighOrLow /> },
