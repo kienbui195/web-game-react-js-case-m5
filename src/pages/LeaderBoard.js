@@ -6,7 +6,6 @@ import axios from "axios";
 import {
     Box, CircularProgress,
     Container, Paper,
-    Stack,
     Table,
     TableBody,
     TableCell,
@@ -14,7 +13,6 @@ import {
     TableHead,
     TableRow
 } from '@mui/material';
-import {DataGrid} from '@mui/x-data-grid';
 
 // components
 
