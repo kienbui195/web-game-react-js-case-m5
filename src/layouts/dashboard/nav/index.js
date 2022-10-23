@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
+import axios from "axios";
 // @mui
 import { styled, alpha } from '@mui/material/styles';
 import { Box, Link, Button, Drawer, Typography, Avatar, Stack, Paper } from '@mui/material';
@@ -14,6 +15,7 @@ import Scrollbar from '../../../components/scrollbar';
 import NavSection from '../../../components/nav-section';
 //
 import navConfig from './config';
+
 
 // ----------------------------------------------------------------------
 
@@ -40,8 +42,28 @@ export default function Nav({ openNav, onCloseNav }) {
     button: 'block',
     link: 'none',
   });
+  const [user, setUser] = useState({})
 
   const isDesktop = useResponsive('up', 'lg');
+
+  const callApi = async () => {
+    const userLocal = JSON.parse(localStorage.getItem('user'));
+    const data = {
+      email: userLocal.email,
+      code: userLocal.code
+    }
+
+    const results = await axios.request({
+      url: "https://webgame395group.herokuapp.com/api/user/info",
+      method: "POST",
+      data: JSON.stringify(data),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+
+    return results
+  }
 
   useEffect(() => {
     if (openNav) {
@@ -49,6 +71,14 @@ export default function Nav({ openNav, onCloseNav }) {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pathname]);
+
+  useEffect(() => {
+    callApi()
+        .then(res=>
+            setUser(res.data.message)
+        )
+        .catch(err=>console.log(err))
+  },[])
 
   const renderContent = (
     <Scrollbar
@@ -68,11 +98,11 @@ export default function Nav({ openNav, onCloseNav }) {
 
             <Box sx={{ ml: 2 }}>
               <Typography variant="subtitle2" sx={{ color: 'text.primary' }}>
-                {account.displayName}
+                {user.username}
               </Typography>
 
               <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                {account.role}
+                Point: {user.point}
               </Typography>
             </Box>
           </StyledAccount>
