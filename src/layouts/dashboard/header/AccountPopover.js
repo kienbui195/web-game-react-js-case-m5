@@ -36,10 +36,7 @@ export default function AccountPopover() {
   };
 
   const logoutApi = async () => {
-    const userInfo = {
-      email: localStorage.getItem('email'),
-      code: localStorage.getItem('code'),
-    };
+    const userInfo = JSON.parse(localStorage.getItem('user'))
     const result = await axios.request({
       url: 'https://webgame395group.herokuapp.com/api/logout',
       method: 'POST',

@@ -4,7 +4,7 @@ import {useEffect, useState} from 'react';
 import axios from "axios";
 // @mui
 import {
-    Box, CircularProgress,
+    CircularProgress,
     Container, Paper,
     Table,
     TableBody,
