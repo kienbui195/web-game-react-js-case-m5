@@ -33,9 +33,9 @@ function Quiz() {
                     </section>
                     <section className="answer-section">
                     <div>
-                        <button onClick={()=>{window.location.reload()}} className="button">Chơi lại</button>
+                        <button onClick={()=>{window.location.reload()}} className="button">Rest Game</button>
                     </div>
-                    <button onClick={()=>{navigate("/dashboard")}} className="button">Thoát</button>
+                    <button onClick={()=>{navigate("/dashboard")}} className="button">Exit</button>
                     </section>
                 </div>
             ) : (
