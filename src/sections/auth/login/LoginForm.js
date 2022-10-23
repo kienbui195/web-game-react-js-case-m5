@@ -82,7 +82,8 @@ export default function LoginForm() {
         if(data.type === 'success'){
             const item = {
                 email: form.email,
-                password: form.password
+                password: form.password,
+                code: data.code
             }
             localStorage.setItem('user', JSON.stringify(item));
             navigate('/')
