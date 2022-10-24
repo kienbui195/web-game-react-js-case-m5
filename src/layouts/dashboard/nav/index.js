@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
 import {useLocation, useNavigate} from 'react-router-dom';
 import axios from "axios";
+import {useSelector} from "react-redux";
 // @mui
 import { styled, alpha } from '@mui/material/styles';
 import { Box, Link, Button, Drawer, Typography, Avatar, Stack, Paper } from '@mui/material';
@@ -15,6 +16,7 @@ import Scrollbar from '../../../components/scrollbar';
 import NavSection from '../../../components/nav-section';
 //
 import navConfig from './config';
+
 
 
 // ----------------------------------------------------------------------
@@ -44,6 +46,7 @@ export default function Nav({ openNav, onCloseNav }) {
     link: 'none',
   });
   const [user, setUser] = useState({})
+  const score = useSelector(state => state.point)
 
   const isDesktop = useResponsive('up', 'lg');
 
@@ -86,7 +89,7 @@ export default function Nav({ openNav, onCloseNav }) {
     }
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  },[])
+  },[score])
 
   const renderContent = (
     <Scrollbar
