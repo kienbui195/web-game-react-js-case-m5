@@ -32,10 +32,15 @@ function Quiz() {
                         <h1>Chúc mừng bạn đã trả lời đúng {score} câu trong {questions.length} câu</h1>
                     </section>
                     <section className="answer-section">
+                        <div>
+                            <button className="button">Lưu Điểm</button>
+                        </div>
                     <div>
-                        <button onClick={()=>{window.location.reload()}} className="button">Rest Game</button>
+                        <button onClick={()=>{window.location.reload()}} className="button">Chơi Lại</button>
                     </div>
-                    <button onClick={()=>{navigate("/dashboard")}} className="button">Exit</button>
+                        <div>
+                    <button onClick={()=>{navigate("/dashboard")}} className="button">Thoát</button>
+                        </div>
                     </section>
                 </div>
             ) : (

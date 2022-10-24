@@ -22,8 +22,8 @@ const navConfig = [
     icon: icon('casino_black_24dp'),
   },
   {
-    title: 'lucky game',
-    path: '/dashboard/luckynumber',
+    title: 'Rock Paper Scissors',
+    path: '/dashboard/RockPaperScissors',
     icon: icon('videogame_asset_black_24dp'),
   },
   {
