@@ -1,3 +1,5 @@
+import {useNavigate} from "react-router-dom";
+import axios from "axios";
 import {
   GameViewContainer,
   GameButton,
@@ -9,8 +11,42 @@ import {
 
 import './index.css'
 
+
+
+
 const GameResultsView = props => {
-  const {choicesList, isShow, checkResult, newArray, text, restartGame, handleExit} = props
+  const {choicesList, isShow, checkResult, newArray, text, restartGame,score} = props
+  const navigate = useNavigate()
+  const userInfo = JSON.parse(localStorage.getItem('user'))
+  console.log(userInfo)
+  console.log(score)
+
+  const updatePoint = async () => {
+    const result = await axios.request({
+      url: 'https://webgame395group.herokuapp.com/api/setpoint',
+      method: 'POST',
+      headers: {  "Content-Type": "application/json"  },
+      data: JSON.stringify({
+        email: `${userInfo.email}`,
+        code: `${userInfo.code}`,
+        point: `${score}`
+      }),
+    });
+
+    return result;
+  };
+
+  const handleExit = () => {
+    updatePoint()
+        .then((res) => {
+          if (res.data.type === 'success') {
+            navigate('/dashboard');
+          } else {
+            setTimeout(() => navigate('/login'), 2000);
+          }
+        })
+        .catch((err) => console.log(err.message));
+  };
   const showGame = () => (
     <GameViewContainer>
       {isShow && (
@@ -68,6 +104,13 @@ const GameResultsView = props => {
               onClick={restartGame}
             >
               Chơi Tiếp
+            </button>
+            <button
+                className="result-button-two"
+                type="button"
+                onClick={handleExit}
+            >
+              Thoát
             </button>
           </ResultImageContainer>
         </>

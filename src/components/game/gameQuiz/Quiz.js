@@ -19,7 +19,7 @@ function Quiz() {
     const handleClick = (isCorrect) => {
         if (isCorrect) {
             setMess('Bạn đã trả lời đúng!')
-            setScore(score + 1);
+            setScore(score + 10);
         }else {
             setMess('Bạn đã trả lời sai!')
         }
