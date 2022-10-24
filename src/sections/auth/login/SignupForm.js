@@ -111,9 +111,17 @@ export default function SignupForm() {
     }
 
     const handleSubmit = () => {
-        callApi().
-        then(res => handleApi(res.data)).
-        catch(err => console.log(err.message))
+        if(form.username===''||form.password===''||form.passwordConfirm===''||form.email==='') {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Please fill out all the required fields'
+            })
+        }else{
+            callApi().
+            then(res => handleApi(res.data)).
+            catch(err => console.log(err.message))
+        }
     }
 
     return (
