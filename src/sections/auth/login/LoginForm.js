@@ -20,7 +20,8 @@ export default function LoginForm() {
     const [showPassword, setShowPassword] = useState(false);
 
     useEffect(() => {
-        if(localStorage.getItem('user')){
+        const user = JSON.parse(localStorage.getItem('user'))
+        if(user){
             navigate('/');
         }
     },[])
