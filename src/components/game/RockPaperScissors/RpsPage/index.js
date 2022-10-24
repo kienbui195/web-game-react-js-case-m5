@@ -1,5 +1,7 @@
 import {Component} from 'react'
 
+
+
 import 'reactjs-popup/dist/index.css'
 
 import ScoreView from '../ScoreView'
@@ -10,6 +12,7 @@ import GameResultsView from '../GameResultsView'
 import {
   MainContainer,
 } from './styledComponents'
+
 
 const choicesList = [
   {
@@ -28,6 +31,7 @@ const choicesList = [
       'https://assets.ccbp.in/frontend/react-js/rock-paper-scissor/paper-image.png',
   },
 ]
+
 function getResult(item1, item2) {
   if (item1.id === 'ROCK') {
     switch (item2.id) {
@@ -81,7 +85,7 @@ class RpsPage extends Component {
     const result = this.getResult(choice1[0], choice2)
     let newScore = score
     if (result === 'YOU WON') {
-      newScore = score + 1
+      newScore = score + 10
     } else {
       newScore = score
     }
@@ -105,6 +109,8 @@ class RpsPage extends Component {
           newArray={newArray}
           checkResult={this.checkResult}
           restartGame={this.restartGame}
+          handleExit = {this.handleExit}
+          score = {score}
         />
       </MainContainer>
     )

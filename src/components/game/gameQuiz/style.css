@@ -35,7 +35,7 @@
 }
 .app-score {
     text-align: center;
-    width: 300px;
+    width: 400px;
     min-height: 50px;
     height: min-content;
     transform: translate(-50%, 50%);
@@ -59,6 +59,16 @@ p {
 }
 
 .answer-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    margin: 20px auto;
+    max-width: 400px;
+    row-gap: 30px;
+    padding: 20px 40px;
+    column-gap: 15px;
+}
+.choose-section {
     display: grid;
     position: relative;
     margin: 20px auto;
