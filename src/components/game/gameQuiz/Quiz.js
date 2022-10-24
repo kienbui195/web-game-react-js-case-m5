@@ -68,7 +68,7 @@ function Quiz() {
             {showScore ? (
                 <div className="app">
                     <section className="question-section">
-                        <h1>Chúc mừng bạn đã trả lời đúng {score} câu trong {questions.length} câu</h1>
+                        <h1>Chúc mừng bạn đã trả lời đúng {score/10} câu trong {questions.length} câu</h1>
                     </section>
                     <section className="choose-section">
                     <div>
