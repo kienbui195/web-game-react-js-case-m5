@@ -188,9 +188,6 @@
       <change beforePath="$PROJECT_DIR$/../voterealtime/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../voterealtime/templates/index.html" afterDir="false" />
 =======
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/gameQuiz/Quiz.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/game/gameQuiz/Quiz.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/gameQuiz/questions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/game/gameQuiz/questions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/gameQuiz/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/game/gameQuiz/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes.js" afterDir="false" />
 >>>>>>> 517c8c2a3434b6148b4c8b31d7780acb492c75b1
     </list>
@@ -231,7 +228,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/NEW/web-game-react-js-case-m5",
+    "last_opened_file_path": "D:/NEW/2048-main",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
@@ -263,7 +260,8 @@
       <workItem from="1666192647692" duration="131000" />
       <workItem from="1666192800075" duration="384000" />
       <workItem from="1666229340785" duration="19862000" />
-      <workItem from="1666314760318" duration="17329000" />
+      <workItem from="1666314760318" duration="18578000" />
+      <workItem from="1666342453043" duration="1892000" />
     </task>
     <servers />
   </component>
