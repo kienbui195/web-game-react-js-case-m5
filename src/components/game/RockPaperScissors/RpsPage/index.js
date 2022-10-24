@@ -85,7 +85,7 @@ class RpsPage extends Component {
     const result = this.getResult(choice1[0], choice2)
     let newScore = score
     if (result === 'YOU WON') {
-      newScore = score + 1
+      newScore = score + 10
     } else {
       newScore = score
     }
@@ -110,6 +110,7 @@ class RpsPage extends Component {
           checkResult={this.checkResult}
           restartGame={this.restartGame}
           handleExit = {this.handleExit}
+          score = {score}
         />
       </MainContainer>
     )
