@@ -35,7 +35,6 @@ const GameHighOrLow = () => {
   };
 
   const userInfo = JSON.parse(localStorage.getItem('user'))
-  console.log(userInfo, point);
 
   const updatePoint = async () => {
     const result = await axios.request({

@@ -32,7 +32,6 @@ function Quiz() {
     };
 
     const userInfo = JSON.parse(localStorage.getItem('user'))
-    console.log(userInfo, score);
 
     const updatePoint = async () => {
         const result = await axios.request({
