@@ -46,7 +46,6 @@ export default function Nav({ openNav, onCloseNav }) {
     link: 'none',
   });
   const [user, setUser] = useState({})
-  const score = useSelector(state => state.point)
 
   const isDesktop = useResponsive('up', 'lg');
 
@@ -89,7 +88,7 @@ export default function Nav({ openNav, onCloseNav }) {
     }
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  },[score])
+  },[]);
 
   const renderContent = (
     <Scrollbar
