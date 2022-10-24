@@ -18,7 +18,7 @@ export const questions = [
         ],
     },
     {
-        questionText: "What is the capital of France?",
+        questionText: "Thủ đô của Pháp?",
         answerOptions: [
             { answerText: "New York", isCorrect: false },
             { answerText: "London", isCorrect: false },
@@ -27,7 +27,7 @@ export const questions = [
         ],
     },
     {
-        questionText: "Who is CEO of Tesla?",
+        questionText: "Ai là  CEO của Tesla?",
         answerOptions: [
             { answerText: "Jeff Bezos", isCorrect: false },
             { answerText: "Elon Musk", isCorrect: true },
@@ -36,7 +36,7 @@ export const questions = [
         ],
     },
     {
-        questionText: "The iPhone was created by which company?",
+        questionText: "Iphone là sản phẩm của công ty nào?",
         answerOptions: [
             { answerText: "Apple", isCorrect: true },
             { answerText: "Intel", isCorrect: false },
@@ -45,12 +45,21 @@ export const questions = [
         ],
     },
     {
-        questionText: "How many Harry Potter books are there?",
+        questionText: "Điểm cực Bắc của nước ta thuộc tỉnh nào?",
         answerOptions: [
-            { answerText: "1", isCorrect: false },
-            { answerText: "4", isCorrect: false },
-            { answerText: "6", isCorrect: false },
-            { answerText: "7", isCorrect: true },
+            { answerText: "Lào Cai", isCorrect: false },
+            { answerText: "Sơn La", isCorrect: false },
+            { answerText: "Lạng Sơn", isCorrect: false },
+            { answerText: "Hà Giang", isCorrect: true },
+        ],
+    },
+    {
+        questionText: "Điểm cực Tây của nước ta thuộc tỉnh nào?",
+        answerOptions: [
+            { answerText: "Nghệ An", isCorrect: false },
+            { answerText: "Kiên Giang", isCorrect: false },
+            { answerText: "Lạng Sơn", isCorrect: false },
+            { answerText: "Điện Biên", isCorrect: true },
         ],
     },
 ];
