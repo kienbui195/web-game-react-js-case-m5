@@ -112,9 +112,17 @@ export default function LoginForm() {
     }
 
     const handleClick = () => {
-        callApi().
-        then(res => handleApi(res.data)).
-        catch(err => console.log(err.message))
+        if(form.email==='' || form.password==='') {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Please fill out all the required fields'
+            })
+        }else {
+            callApi().
+            then(res => handleApi(res.data)).
+            catch(err => console.log(err.message))
+        }
     };
 
     return (
