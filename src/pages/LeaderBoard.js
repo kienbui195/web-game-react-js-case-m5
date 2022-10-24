@@ -4,9 +4,8 @@ import {useEffect, useState} from 'react';
 import axios from "axios";
 // @mui
 import {
-    Box, CircularProgress,
+    CircularProgress,
     Container, Paper,
-    Stack,
     Table,
     TableBody,
     TableCell,
@@ -14,8 +13,6 @@ import {
     TableHead,
     TableRow
 } from '@mui/material';
-// import {DataGrid} from '@mui/x-data-grid';
-
 // components
 
 // ----------------------------------------------------------------------
@@ -33,6 +30,7 @@ export default function LeaderBoard() {
                     myarray.push(data[i]);
                 }
                 const results = myarray.sort(({point: a}, {point: b}) => b - a);
+                console.log(results)
                 setLeaderboard(results)
                 setLoading(false);
             })

@@ -10,9 +10,9 @@ import SignupPage from './pages/SignupPage';
 import Quiz from "./components/game/gameQuiz/Quiz";
 import {FieldLevelValidationExample} from "./pages/Test";
 import GameHighOrLow from './components/game/GameHighOrLow/GameHighOrLow';
-import LuckyGame from './components/game/GameMayMan/LuckyGame';
 import UserProfile from './pages/UserProfile';
 import LeaderBoard from "./pages/LeaderBoard";
+import RpsPage from "./components/game/RockPaperScissors/RpsPage";
 
 // ----------------------------------------------------------------------
 
@@ -27,7 +27,7 @@ export default function Router() {
         { path: 'app', element: <DashboardAppPage /> },
         { path: 'quiz', element: <Quiz /> },
         { path: 'casino', element: <GameHighOrLow /> },
-        { path: 'luckynumber', element: <LuckyGame /> },
+        { path: 'RockPaperScissors', element: <RpsPage /> },
         {path: 'profile', element: <UserProfile />},
       ],
     },
