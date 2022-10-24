@@ -63,7 +63,16 @@ p {
     grid-template-columns: 1fr 1fr;
     position: relative;
     margin: 20px auto;
-    max-width: 300px;
+    max-width: 400px;
+    row-gap: 30px;
+    padding: 20px 40px;
+    column-gap: 15px;
+}
+.choose-section {
+    display: grid;
+    position: relative;
+    margin: 20px auto;
+    max-width: 400px;
     row-gap: 30px;
     padding: 20px 40px;
     column-gap: 15px;
