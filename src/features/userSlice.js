@@ -3,17 +3,16 @@ import { createSlice } from '@reduxjs/toolkit';
 export const userRegisterSlice = createSlice({
 	name: 'user',
     initialState: {
-        name: '',
-        email: ''
+        point: ''
     },
     reducers: {
-        getEmail: (state, action) => {
-            state.email = action.payload
+        getPoint: (state, action) => {
+            state.point = action.payload
         }
     }
 });
 
 // Action creators are generated for each case reducer function
-export const { getEmail } = userRegisterSlice.actions;
+export const { getPoint } = userRegisterSlice.actions;
 
 export default userRegisterSlice.reducer;
