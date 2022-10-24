@@ -11,11 +11,7 @@ const navConfig = [
     path: '/dashboard/leaderboard',
     icon: icon('ic_analytics'),
   },
-  {
-    title: 'Game',
-    path: '/dashboard/game',
-    icon: icon('videogame_asset_black_24dp')
-  },
+
   {
     title: 'User Profile',
     path: '/dashboard/profile',
