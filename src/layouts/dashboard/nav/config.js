@@ -12,19 +12,9 @@ const navConfig = [
     icon: icon('ic_analytics'),
   },
   {
-    title: 'quiz',
-    path: '/dashboard/quiz',
-    icon: icon('quiz_black_24dp'),
-  },
-  {
-    title: 'casino',
-    path: '/dashboard/casino',
-    icon: icon('casino_black_24dp'),
-  },
-  {
-    title: 'Rock Paper Scissors',
-    path: '/dashboard/RockPaperScissors',
-    icon: icon('videogame_asset_black_24dp'),
+    title: 'Game',
+    path: '/dashboard/game',
+    icon: icon('videogame_asset_black_24dp')
   },
   {
     title: 'User Profile',

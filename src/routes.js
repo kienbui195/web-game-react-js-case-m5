@@ -7,11 +7,13 @@ import LoginPage from './pages/LoginPage';
 import Page404 from './pages/Page404';
 import DashboardAppPage from './pages/DashboardAppPage';
 import SignupPage from './pages/SignupPage';
-import Quiz from "./components/game/gameQuiz/Quiz";
+import Quiz from './components/game/gameQuiz/Quiz';
 import GameHighOrLow from './components/game/GameHighOrLow/GameHighOrLow';
 import UserProfile from './pages/UserProfile';
-import LeaderBoard from "./pages/LeaderBoard";
-import RpsPage from "./components/game/RockPaperScissors/RpsPage";
+import LeaderBoard from './pages/LeaderBoard';
+import RpsPage from './components/game/RockPaperScissors/RpsPage';
+import AboutPage from './pages/About';
+import GamePage from './pages/Game';
 
 // ----------------------------------------------------------------------
 
@@ -24,10 +26,12 @@ export default function Router() {
         { element: <Navigate to="/dashboard/app" />, index: true },
         { path: 'leaderboard', element: <LeaderBoard /> },
         { path: 'app', element: <DashboardAppPage /> },
+        { path: 'game', element: <GamePage /> },
         { path: 'quiz', element: <Quiz /> },
         { path: 'casino', element: <GameHighOrLow /> },
         { path: 'RockPaperScissors', element: <RpsPage /> },
-        {path: 'profile', element: <UserProfile />},
+        { path: 'profile', element: <UserProfile /> },
+        { path: 'about', element: <AboutPage /> },
       ],
     },
     {
@@ -38,7 +42,7 @@ export default function Router() {
       element: <SimpleLayout />,
       children: [
         { element: <Navigate to="/dashboard/app" />, index: true },
-        
+
         { path: '404', element: <Page404 /> },
         { path: '*', element: <Navigate to="/404" /> },
       ],
@@ -50,7 +54,7 @@ export default function Router() {
     {
       path: '*',
       element: <Navigate to="/404" replace />,
-    }
+    },
   ]);
 
   return routes;
