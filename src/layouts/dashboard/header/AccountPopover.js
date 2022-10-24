@@ -1,10 +1,10 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
 // @mui
 import { alpha } from '@mui/material/styles';
-import { Box, Divider, Typography, Stack, MenuItem, Avatar, IconButton, Popover } from '@mui/material';
+import { Divider, Stack, MenuItem, Avatar, IconButton, Popover } from '@mui/material';
 // mocks_
 import account from '../../../_mock/account';
 
@@ -25,27 +25,26 @@ const MENU_OPTIONS = [
 
 export default function AccountPopover() {
   const [open, setOpen] = useState(null);
-  const [user, setUser] = useState({
-    username: '',
-    email: '',
-  });
+
   const navigate = useNavigate();
 
   const handleOpen = (event) => {
     setOpen(event.currentTarget);
   };
 
-  const logoutApi = async () => {
-    const userInfo = JSON.parse(localStorage.getItem('user'))
+  const deleteCode = async () => {
+    const userInfo = JSON.parse(localStorage.getItem('user'));
+
     const result = await axios.request({
       url: 'https://webgame395group.herokuapp.com/api/logout',
       method: 'POST',
-      headers: { 'Content-Type': 'Application/json' },
+      headers: { 'content-Type': 'Application/json' },
       data: JSON.stringify({
         email: userInfo.email,
         code: userInfo.code,
       }),
     });
+
     return result;
   };
 
@@ -59,42 +58,18 @@ export default function AccountPopover() {
         break;
       case 'Logout':
         if (window.confirm('Are U Sure?')) {
-          logoutApi()
-            .then((res) => {
-              if (res.data.type === 'success') {
-                navigate('/login');
-              } else if (res.data.type === 'error') {
-                console.log(res.data.message);
-              }
+          deleteCode()
+            .then(() => {
+              localStorage.clear();
+              navigate('/login');
             })
             .catch((err) => console.log(err.message));
         } else setOpen(null);
         break;
       default:
-        setOpen(null)
+        setOpen(null);
     }
   };
-
-  const getUserApi = async () => {
-    const result = await axios.request({
-      url: 'https://webgame395group.herokuapp.com/api/user/info',
-      method: 'POST',
-      Headers: { 'Content-Type': 'Application/json' },
-      data: JSON.stringify({
-        email: localStorage.getItem('email'),
-        code: localStorage.getItem('code'),
-      }),
-    });
-    return result;
-  };
-
-  useEffect(() => {
-    getUserApi()
-      .then((res) => {
-        setUser({ username: res.data.message.username, email: res.data.message.email });
-      })
-      .catch((err) => console.log(err));
-  }, []);
 
   return (
     <>
@@ -137,15 +112,6 @@ export default function AccountPopover() {
           },
         }}
       >
-        <Box sx={{ my: 1.5, px: 2.5 }}>
-          <Typography variant="subtitle2" noWrap>
-            {user ? user.username : ''}
-          </Typography>
-          <Typography variant="body2" sx={{ color: 'text.secondary' }} noWrap>
-            {user ? user.username : ''}
-          </Typography>
-        </Box>
-
         <Divider sx={{ borderStyle: 'dashed' }} />
 
         <Stack sx={{ p: 1 }}>
@@ -158,7 +124,7 @@ export default function AccountPopover() {
 
         <Divider sx={{ borderStyle: 'dashed' }} />
 
-        <MenuItem onClick={()=>handleClose('Logout')} sx={{ m: 1 }}>
+        <MenuItem onClick={() => handleClose('Logout')} sx={{ m: 1 }}>
           Logout
         </MenuItem>
       </Popover>
