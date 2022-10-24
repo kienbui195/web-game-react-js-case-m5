@@ -74,7 +74,8 @@ export default function Nav({ openNav, onCloseNav }) {
   }, [pathname]);
 
   useEffect(() => {
-    if(localStorage.getItem('user')){
+    const user = JSON.parse(localStorage.getItem('user'))
+    if(user){
       callApi()
           .then(res=>
               setUser(res.data.message)
