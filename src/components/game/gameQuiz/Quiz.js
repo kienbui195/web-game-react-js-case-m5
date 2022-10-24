@@ -19,7 +19,7 @@ function Quiz() {
     const handleClick = (isCorrect) => {
         if (isCorrect) {
             setMess('Bạn đã trả lời đúng!')
-            setScore(score + 1);
+            setScore(score + 10);
         }else {
             setMess('Bạn đã trả lời sai!')
         }
@@ -68,7 +68,7 @@ function Quiz() {
             {showScore ? (
                 <div className="app">
                     <section className="question-section">
-                        <h1>Chúc mừng bạn đã trả lời đúng {score} câu trong {questions.length} câu</h1>
+                        <h1>Chúc mừng bạn đã trả lời đúng {score/10} câu trong {questions.length} câu</h1>
                     </section>
                     <section className="choose-section">
                     <div>

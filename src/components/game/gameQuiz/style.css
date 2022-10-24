@@ -35,7 +35,7 @@
 }
 .app-score {
     text-align: center;
-    width: 300px;
+    width: 400px;
     min-height: 50px;
     height: min-content;
     transform: translate(-50%, 50%);

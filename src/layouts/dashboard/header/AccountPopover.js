@@ -34,11 +34,11 @@ export default function AccountPopover() {
 
   const deleteCode = async () => {
     const userInfo = JSON.parse(localStorage.getItem('user'));
-
+    console.log(userInfo);
     const result = await axios.request({
       url: 'https://webgame395group.herokuapp.com/api/logout',
       method: 'POST',
-      headers: { 'content-Type': 'Application/json' },
+      headers: { 'Content-Type': 'Application/json' },
       data: JSON.stringify({
         email: userInfo.email,
         code: userInfo.code,
@@ -59,9 +59,13 @@ export default function AccountPopover() {
       case 'Logout':
         if (window.confirm('Are U Sure?')) {
           deleteCode()
-            .then(() => {
-              localStorage.clear();
-              navigate('/login');
+            .then((res) => {
+              if (res.data.type === 'success') {
+                localStorage.clear();
+                navigate('/login');
+              } else {
+                setOpen(null);
+              }
             })
             .catch((err) => console.log(err.message));
         } else setOpen(null);
