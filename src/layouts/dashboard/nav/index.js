@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
 import {useLocation, useNavigate} from 'react-router-dom';
 import axios from "axios";
-import {useSelector} from "react-redux";
 // @mui
 import { styled, alpha } from '@mui/material/styles';
 import { Box, Link, Button, Drawer, Typography, Avatar, Stack, Paper } from '@mui/material';
@@ -87,9 +86,8 @@ export default function Nav({ openNav, onCloseNav }) {
     }else {
       navigate('/login')
     }
-
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  },[])
+  },[pathname]);
 
   const renderContent = (
     <Scrollbar
