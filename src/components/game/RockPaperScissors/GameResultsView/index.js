@@ -10,7 +10,7 @@ import {
 import './index.css'
 
 const GameResultsView = props => {
-  const {choicesList, isShow, checkResult, newArray, text, restartGame} = props
+  const {choicesList, isShow, checkResult, newArray, text, restartGame, handleExit} = props
   const showGame = () => (
     <GameViewContainer>
       {isShow && (
