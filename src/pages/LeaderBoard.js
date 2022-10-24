@@ -13,7 +13,6 @@ import {
     TableHead,
     TableRow
 } from '@mui/material';
-
 // components
 
 // ----------------------------------------------------------------------
@@ -31,6 +30,7 @@ export default function LeaderBoard() {
                     myarray.push(data[i]);
                 }
                 const results = myarray.sort(({point: a}, {point: b}) => b - a);
+                console.log(results)
                 setLeaderboard(results)
                 setLoading(false);
             })
