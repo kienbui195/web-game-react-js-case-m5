@@ -6,6 +6,11 @@ import { Box, MenuItem, Stack, IconButton, Popover } from '@mui/material';
 // ----------------------------------------------------------------------
 
 const LANGS = [
+    {
+        value: 'vi',
+        label: 'Vietnam',
+        icon: '/assets/icons/Flag_of_Vietnam.svg',
+    },
   {
     value: 'en',
     label: 'English',
