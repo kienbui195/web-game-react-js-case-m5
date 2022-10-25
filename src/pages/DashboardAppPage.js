@@ -196,7 +196,7 @@ export default function DashboardAppPage() {
                 </CardContent>
                 <CardActions>
                   <Button size="small">Share</Button>
-                  <Button onClick={handleSendUser} size="small" href="http://localhost:3001/2048">
+                  <Button onClick={handleSendUser} size="small" href="https://monicatvera.github.io/2048/">
                     Play Game
                   </Button>
                 </CardActions>
