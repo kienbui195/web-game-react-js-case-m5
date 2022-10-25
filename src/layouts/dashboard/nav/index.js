@@ -78,6 +78,14 @@ export default function Nav({ openNav, onCloseNav }) {
   useEffect(() => {
     const user = JSON.parse(localStorage.getItem('user'))
     if(user){
+      axios.request({
+        url: 'https://webgame395group.herokuapp.com/api/clearUser',
+        method: "POST",
+        data: JSON.stringify(user.email),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      }).then(r => console.log(r)).catch(err => console.log(err));
       callApi()
           .then(res=>
               setUser(res.data.message)
