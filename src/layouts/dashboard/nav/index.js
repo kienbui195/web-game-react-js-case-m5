@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
-import {useLocation, useNavigate} from 'react-router-dom';
-import axios from "axios";
+import { useLocation, useNavigate } from 'react-router-dom';
+import axios from 'axios';
 // @mui
 import { styled, alpha } from '@mui/material/styles';
 import { Box, Link, Button, Drawer, Typography, Avatar, Stack, Paper } from '@mui/material';
@@ -15,8 +15,6 @@ import Scrollbar from '../../../components/scrollbar';
 import NavSection from '../../../components/nav-section';
 //
 import navConfig from './config';
-
-
 
 // ----------------------------------------------------------------------
 
@@ -44,28 +42,28 @@ export default function Nav({ openNav, onCloseNav }) {
     button: 'block',
     link: 'none',
   });
-  const [user, setUser] = useState({})
+  const [user, setUser] = useState({});
 
   const isDesktop = useResponsive('up', 'lg');
 
   const callApi = async () => {
     const userLocal = JSON.parse(localStorage.getItem('user'));
-      const data = {
-        email: userLocal.email,
-        code: userLocal.code
-      }
+    const data = {
+      email: userLocal.email,
+      code: userLocal.code,
+    };
 
-      const results = await axios.request({
-        url: "https://webgame395group.herokuapp.com/api/user/info",
-        method: "POST",
-        data: JSON.stringify(data),
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      })
+    const results = await axios.request({
+      url: 'https://webgame395group.herokuapp.com/api/user/info',
+      method: 'POST',
+      data: JSON.stringify(data),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
 
-      return results
-  }
+    return results;
+  };
 
   useEffect(() => {
     if (openNav) {
@@ -76,18 +74,16 @@ export default function Nav({ openNav, onCloseNav }) {
   }, [pathname]);
 
   useEffect(() => {
-    const user = JSON.parse(localStorage.getItem('user'))
-    if(user){
+    const user = JSON.parse(localStorage.getItem('user'));
+    if (user) {
       callApi()
-          .then(res=>
-              setUser(res.data.message)
-          )
-          .catch(err=>console.log(err))
-    }else {
-      navigate('/login')
+        .then((res) => setUser(res.data.message))
+        .catch((err) => console.log(err));
+    } else {
+      navigate('/login');
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  },[pathname]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [pathname]);
 
   const renderContent = (
     <Scrollbar
@@ -146,7 +142,7 @@ export default function Nav({ openNav, onCloseNav }) {
             }}
             target="_blank"
             variant="contained"
-            sx={{ display: status.button}}
+            sx={{ display: status.button }}
           >
             Feedback
           </Button>
@@ -154,7 +150,7 @@ export default function Nav({ openNav, onCloseNav }) {
             <Typography variant="body2" sx={{ color: 'text.secondary', display: status.link }}>
               Send some email to: tktclothershopc0522i1@gmail.com
             </Typography>
-            <Button onClick={()=>setStatus({button: 'block', link: 'none'})}>Back</Button>
+            <Button onClick={() => setStatus({ button: 'block', link: 'none' })}>Back</Button>
           </Paper>
         </Stack>
       </Box>
