@@ -81,7 +81,7 @@ export default function Nav({ openNav, onCloseNav }) {
       axios.request({
         url: 'https://webgame395group.herokuapp.com/api/clearUser',
         method: "POST",
-        data: JSON.stringify(user.email),
+        data: JSON.stringify({email: user.email}),
         headers: {
           'Content-Type': 'application/json'
         }
