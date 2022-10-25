@@ -1,10 +1,12 @@
 import { Helmet } from 'react-helmet-async';
 import { useNavigate } from 'react-router-dom';
+import axios from "axios";
 // @mui
 import { Grid, Container, Typography, Card, CardMedia, CardContent, CardActions, Button } from '@mui/material';
 // components
 // sections
 import { AppWidgetSummary } from '../sections/@dashboard/app';
+
 
 // ----------------------------------------------------------------------
 
@@ -25,6 +27,26 @@ export default function DashboardAppPage() {
       default:
     }
   };
+  const user = JSON.parse(localStorage.getItem('user'));
+  const sendUser = async () => {
+    const result = await axios.request({
+      url: ' https://webgame395group.herokuapp.com/api/sendUser',
+      method: 'POST',
+      headers: {"Content-Type": "application/json"},
+      data: JSON.stringify({
+        email: user.email,
+        code: user.code,
+      }),
+    })
+    return result
+  }
+
+
+  const handleSendUser = () => {
+    sendUser().then(res =>{
+      console.log(res)
+    }).catch(err => console.log(err.message))
+  }
   return (
     <>
       <Helmet>
@@ -174,7 +196,7 @@ export default function DashboardAppPage() {
                 </CardContent>
                 <CardActions>
                   <Button size="small">Share</Button>
-                  <Button size="small" href="https://monicatvera.github.io/2048">
+                  <Button onClick={handleSendUser} size="small" href="http://localhost:3001/2048">
                     Play Game
                   </Button>
                 </CardActions>
